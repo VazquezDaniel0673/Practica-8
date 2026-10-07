@@ -116,34 +116,19 @@
 
     <main>
         <article>
-            <h2>Tienda online</h2>
+            <h2>Cuenta</h2>
+                <form action="" method="post">
+                Ingresa tu usuario:
+                <input type="text" name="usuario">
+                Ingresa tu contraseña:
+                <input type="password" name="pass">
+        
+                <br> 
+        
+                <button type="submit"> Iniciar sesion</button>
 
-            <!-- Agrupamos las imágenes en un div con flexbox -->
-            <div class="galeria-imagenes">
-                <img src="belleza1.jpg" alt="Productos de belleza" style="width: 150px; height: auto">
-                <img src="cocina1.jpg" alt="Productos de cocina" style="width: 150px; height: auto">
-                <img src="juguetes1.jpg" alt="Jugueteria" style="width: 150px; height: auto">
-                <img src="pc1.jpg" alt="Tienda de electronica" style="width: 200px; height: auto">
-                <img src="ropa1.jpg" alt="Moda" style="width: 200px; height: auto">
-            </div>
-
-                <label for="producto">Producto: </label>
-                <select id="producto" name="producto">
-                    <option>Productos de BELLEZA</option>
-                    <option>Productos de COCINA</option>
-                    <option>Jugueteria</option>
-                    <option>Productos ELECTRONICOS</option>
-                    <option>ROPA y MODA</option>
-                </select>
-
-                <label for="cantidad">Cantidad:</label>
-                <input type="number" id="cantidad" name="cantidad" value="1" min="1">
-
-                <div class="btn-group">
-                    <input type="submit" value="Comprar" class="btn submit">
-                    <input type="reset" value="Borrar" class="btn reset">
-                </div>
-            </form>
+                 </form>
+                 <li> <a href="crear.html">Crear una NUEVA CUENTA</a></li>
         </article>
     </main>
 
