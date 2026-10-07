@@ -122,19 +122,32 @@
                 <input type="email" name="correo electronico">
                 Ingresa tu usuario:
                 <input type="text" name="usuario">
+
                 Ingresa tu contraseña:
-                <input type="password" name="pass">
+                <input type="password" id="pass" required>
                 Confirma tu contraseña:
-                <input type="password" name="pass">
+                <input type="password" name="cof_pass" required>
 
         
                 <br> 
         
-                <input type="submit" value="enviar">
-        
-                <input type="reset" value="borrar">
+                <button type="submit"> Registrarse</button>
+                </form>
+                <script>
+                    const password = document.getElementById('password');
+                    const confirmPassword = document.getElementById('confirm_password');
 
-                 </form>
+                    function validarContrasenas() {
+                        if (password.value !== confirmPassword.value) {
+                            confirmPassword.setCustomValidity('Las contraseñas no coinciden.');
+                        } else {
+                        confirmPassword.setCustomValidity(''); // Campo válido
+                        }
+                    }
+
+                    password.addEventListener('change', validarContrasenas);
+                    confirmPassword.addEventListener('keyup', validarContrasenas);
+                </script>
         </article>
     </main>
 
