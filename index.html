@@ -71,6 +71,13 @@
             flex-wrap: wrap;
             margin-bottom: 20px;
         }
+
+        .galeria-imagenes img {
+            width: 130px;
+            height: auto;
+            border-radius: 5px;
+        }
+
         form {
             display: flex;
             flex-direction: column;
@@ -103,38 +110,60 @@
 <body>
 
     <header>
-        <h1>Tienda de Daniel69</h1>
+        <h1>Tienda</h1>
     </header>
 
     <nav>
         <ul>
-            <li><a href="index.html">Inicio</a></li>
+            <li><a href="#">Inicio</a></li>
             <li><a href="#">Ofertas</a></li>
-            <li><a href="cuenta.html">Cuenta</a></li>
+            <li><a href="#">Cuenta</a></li>
         </ul>
     </nav>
 
     <main>
         <article>
-            <h2>Cuenta</h2>
-                <form action="" method="post">
-                Ingresa tu usuario:
-                <input type="text" name="usuario">
-                Ingresa tu contraseña:
-                <input type="password" name="pass">
-        
-                <br> 
-        
-                <button type="submit"> Iniciar sesion</button>
+            <h2>Tienda online</h2>
 
-                 </form>
-                 <li> <a href="crear.html">Crear una NUEVA CUENTA</a></li>
+            <!-- Agrupamos las imágenes en un div con flexbox -->
+            <div class="galeria-imagenes">
+                <img src="belleza1.jpg" alt="Productos de belleza">
+                <img src="cocina1.jpg" alt="Productos de cocina">
+                <img src="juguetes1.jpg" alt="Jugueteria">
+                <img src="pc1.jpg" alt="Tienda de electronica">
+                <img src="ropa1.jpg" alt="Moda">
+            </div>
+
+            <form action="" method="post">
+                <label for="usuario">Usuario: </label>
+                <input type="text" id="usuario" name="usuario" required>
+
+                <label for="producto">Producto: </label>
+                <select id="producto" name="producto">
+                    <option>Productos de BELLEZA</option>
+                    <option>Productos de COCINA</option>
+                    <option>Jugueteria</option>
+                    <option>Productos ELECTRONICOS</option>
+                    <option>ROPA y MODA</option>
+                </select>
+
+                <label for="cantidad">Cantidad:</label>
+                <input type="number" id="cantidad" name="cantidad" value="1" min="1">
+
+                <div class="btn-group">
+                    <input type="submit" value="Comprar" class="btn submit">
+                    <input type="reset" value="Borrar" class="btn reset">
+                </div>
+            </form>
         </article>
     </main>
 
     <footer>
         <p>Daniel Vazquez Montañez | 5ºI | 24308051280673</p>
     </footer>
+
+</body>
+</html>
 
 </body>
 </html>
